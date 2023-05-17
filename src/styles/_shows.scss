@@ -4,6 +4,7 @@
 .shows{
     padding: 2vw 5.6vw;
     min-height: 50vw;
+
     &__list {
         margin-top: 44px;
         display: none;
@@ -13,6 +14,7 @@
         &--is--active {
             display: grid;
         }
+
         &__item{
             img{
                 max-width: 100%;
@@ -24,6 +26,7 @@
     &__tabs {
         display: flex;
         justify-content: center;
+        
         &__button{
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
