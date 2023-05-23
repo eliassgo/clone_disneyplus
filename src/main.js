@@ -1,31 +1,68 @@
-document.addEventListener('DOMContentLoaded', function(){//DomContentLoaded aciona a função quando todos os elementos HTML estiverem carregados 
+document.addEventListener('DOMContentLoaded', function () {//DomContentLoaded aciona a função quando todos os elementos HTML estiverem carregados 
     const buttons = document.querySelectorAll('[data-tab-button]'); // a contante buttons seleciona todos os elementos com o id button-tab-button
+    const questions = document.querySelectorAll('[data-faq-question]');
 
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
 
-    for (let i = 0; i < buttons.length; i++){ //o loop percorre cada botao e adiciona o evento de click 
-        buttons[i].addEventListener('click', function(botao){
+    window.addEventListener('scroll', function () {
+        const posicaoAtual = this.window.scrollY;
+
+        if (posicaoAtual < alturaHero) {
+            ocultaElementosHeader();
+        } else {
+            exibeElementos()
+        }
+    })
+    // Seção de atrações, programação das abas
+    for (let i = 0; i < buttons.length; i++) { //o loop percorre cada botao e adiciona o evento de click 
+        buttons[i].addEventListener('click', function (botao) {
 
             const abaAlvo = botao.target.dataset.tabButton; // a constante abaAlvo obtem a guia correspondente ao botão 
             const aba = document.querySelector(`[data-tab-id=${abaAlvo}]`); // aba alvo guarda a guia selecionada e encontra o elemento que possui o atributo 'data-tab-id' correspondente ao abaAlvo
-            
+
             escondeTodasAbas(); // É chamada para esconder todas as abas removendo a classe 'shows__list--is-active'
             aba.classList.add('shows__list--is--active'); // A classe shows__list--is--active é adicionada 
             removeBotaoAtivo() // essa funçao é chamda para remover de todos os botões a classe show__tabs__button--is--active 
             botao.target.classList.add('shows__tabs__button--is--active'); //A classe show__tabs__button--is--active é adicionada ao botao clicado usando 
         })
     }
+
+    // Seção FAQ, accordions
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].addEventListener('click', abreOuFechaResposta);
+    }
 })
 
-function removeBotaoAtivo(){
+function ocultaElementosHeader() {
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden');
+}
+
+function exibeElementos() {
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden');
+}
+
+function abreOuFechaResposta(elemento) {
+    const classe = 'faq__questions__item--is--open';
+    const elementoPai = elemento.target.parentNode;
+
+    elementoPai.classList.toggle(classe);
+}
+
+
+
+function removeBotaoAtivo() {
     const buttons = document.querySelectorAll('[data-tab-button]');
 
-    for (let i = 0; i < buttons.length; i++){
+    for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove('shows__tabs__button--is--active')
     }
 }
 
 function escondeTodasAbas() {
-    const tabsContainer = document.querySelectorAll('[data-tab-id]'); 
+    const tabsContainer = document.querySelectorAll('[data-tab-id]');
 
     for (let i = 0; i < tabsContainer.length; i++) {
         tabsContainer[i].classList.remove('shows__list--is--active');

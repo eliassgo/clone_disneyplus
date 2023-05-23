@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,30 @@
     <title>Clone Disney+</title>
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
+
 <body>
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="button button--dark">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__content__branding">
+            <div class="hero__content__branding">
                 <img src="./dist/images/disneyplus.svg" alt="Disney+">
-            </h1>
+            </div>
             <h3 class="title--small">
-                As melhores história em um só lugar. 
+                As melhores história em um só lugar.
             </h3>
             <p>
                 <a href="#" class="link-text">Assinar o Disney+</a>
@@ -45,67 +62,68 @@
 
     <section class="shows">
         <nav class="shows__tabs">
-            <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is--active">Em breve</button>
+            <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is--active">Em
+                breve</button>
             <button data-tab-button="populares" class="shows__tabs__button">Mais populares</button>
             <button data-tab-button="star_plus" class="shows__tabs__button">Mais no Star+</button>
         </nav>
-        <ul  data-tab-id="em_breve" class="shows__list shows__list--is--active">
-            <li class="show__list__item">
+        <ul data-tab-id="em_breve" class="shows__list shows__list--is--active">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/desencantada.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/lobisomem.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
         </ul>
         <ul data-tab-id="populares" class="shows__list">
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/mais_populares/cavaleira_da_lua.jpg" alt="Cavaleiros da lua">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/mais_populares/bluey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/mais_populares/o_incrivel_dr_pol.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
         </ul>
         <ul data-tab-id="star_plus" class="shows__list">
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/mais_no_star_plus/the_kardashians.jpg" alt="The kardashians">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/mais_no_star_plus/os_simpson.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/mais_no_star_plus/belair.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
-            <li class="show__list__item">
+            <li class="shows__list__item">
                 <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
             </li>
         </ul>
@@ -121,7 +139,7 @@
                 <strong class="title--small">R$ 27,90/Mês*</strong>
                 <p class="text--big">
                     Stream up to 4 different devices at once
-                    Download and watch your favorites without connection or 
+                    Download and watch your favorites without connection or
                 </p>
                 <button class="button">Assine agora</button>
             </li>
@@ -130,7 +148,7 @@
                 <strong class="title--small">R$ 27,90/Mês*</strong>
                 <p class="text--big">
                     Stream up to 4 different devices at once
-                    Download and watch your favorites without connection or 
+                    Download and watch your favorites without connection or
                 </p>
                 <button class="button">Assine agora</button>
             </li>
@@ -139,7 +157,7 @@
                 <strong class="title--small">R$ 27,90/Mês*</strong>
                 <p class="text--big">
                     Stream up to 4 different devices at once
-                    Download and watch your favorites without connection or 
+                    Download and watch your favorites without connection or
                 </p>
                 <button class="button">Assine agora</button>
             </li>
@@ -155,8 +173,8 @@
             <h2 class="title">Assista do seu jeito</h2>
             <p class="text--big">
                 Stream up to 4 different devices at once
-                    Download and watch your favorites without connection or Stream up to 4 different devices at once
-                    Download and watch your favorites without connection or 
+                Download and watch your favorites without connection or Stream up to 4 different devices at once
+                Download and watch your favorites without connection or
             </p>
         </div>
     </section>
@@ -166,8 +184,8 @@
             <h2 class="title">Baixe filmes e séries</h2>
             <p class="text--big">
                 Stream up to 4 different devices at once
-                    Download and watch your favorites without connection or Stream up to 4 different devices at once
-                    Download and watch your favorites without connection or 
+                Download and watch your favorites without connection or Stream up to 4 different devices at once
+                Download and watch your favorites without connection or
             </p>
         </div>
     </section>
@@ -185,7 +203,7 @@
             </li>
             <li class="available-devices__list__item">
                 <img src="./dist/images/dispositivos/computador.png" alt="Computador">
-                <h4 class="title--small">Computador</h4>
+                <h4 class="title--small">TV</h4>
                 <ul class="text">
                     <li>Chrome OS</li>
                     <li>MacOS</li>
@@ -194,7 +212,7 @@
             </li>
             <li class="available-devices__list__item">
                 <img src="./dist/images/dispositivos/computador.png" alt="Computador">
-                <h4 class="title--small">Computador</h4>
+                <h4 class="title--small">Videogames</h4>
                 <ul class="text">
                     <li>Chrome OS</li>
                     <li>MacOS</li>
@@ -203,7 +221,7 @@
             </li>
             <li class="available-devices__list__item">
                 <img src="./dist/images/dispositivos/computador.png" alt="Computador">
-                <h4 class="title--small">Computador</h4>
+                <h4 class="title--small">Celulares e tablets</h4>
                 <ul class="text">
                     <li>Chrome OS</li>
                     <li>MacOS</li>
@@ -216,39 +234,91 @@
         <h2 class="title">Perguntas Frequentes</h2>
         <ul class="faq__questions">
             <li class="faq__questions__item">
-                <div class="faq__questions__item__question">
-                    Pergunta?
+                <div class="faq__questions__item__question" data-faq-question>
+                    O que está incluído no Disney+?
                 </div>
-                <div class="faq__questions__item__answer">
+                <div class="faq__questions__item__answer text--big">
+                    O Disney+ oferece:
+                    Experiência de entretenimento exclusiva.<br>
+                    As melhores histórias da Disney, Pixar, Marvel, Star Wars e National Geographic, tudo em um só
+                    lugar.
+                </div>
+            </li>
+            <li class="faq__questions__item faq__question__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Já tem o Disney+ ou o Star+ e quer o Combo+?
+                </div>
+                <div class="faq__questions__item__answer text--big">
                     Resposta
                 </div>
             </li>
             <li class="faq__questions__item">
-                <div class="faq__questions__item__question">
-                    Pergunta?
+                <div class="faq__questions__item__question" data-faq-question>
+                    Quais as formas de pagamento posso utilizar?
                 </div>
-                <div class="faq__questions__item__answer">
+                <div class="faq__questions__item__answer text--big">
                     Resposta
                 </div>
             </li>
             <li class="faq__questions__item">
-                <div class="faq__questions__item__question">
-                    Pergunta?
+                <div class="faq__questions__item__question" data-faq-question>
+                    Como posso ver conteúdo com classificação indicativa até 16 e 18?
                 </div>
-                <div class="faq__questions__item__answer">
-                    Resposta
-                </div>
-            </li>
-            <li class="faq__questions__item">
-                <div class="faq__questions__item__question">
-                    Pergunta?
-                </div>
-                <div class="faq__questions__item__answer">
+                <div class="faq__questions__item__answer text--big">
                     Resposta
                 </div>
             </li>
         </ul>
     </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+            <ul class="footer_links">
+                <li class="footer__links__item">
+                    <div class="language-selector">
+                        <img src="./dist/images/icones/globe.svg" alt="Globo do mundo">
+                        <select>
+                            <option>English</option>
+                            <option selected>Português</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Termos e condições de Uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Política de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Política de Dados no Brasil</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Anúncios personalizados</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Dispositivos compatívis</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Ajuda</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Sobre a Disney+</a>
+                </li>
+            </ul>
+            <p class="text--small">
+                ® 2023 Disney, Disney+ e The Walt Disney Company. Todos os direitos reservados. Serviço de assinatura
+                paga.
+                Conteúdo sujeito a disponibilidade.
+            </p>
+            <p class="text--small">
+                Disney+ é um serviço pago, baseado em assinatura e sujeito a termos e condições. O serviço Disney+ é
+                comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das Nações Unidas,
+                12.551, 12.555, 12.559, Piso 10, São Paulo/SP – CEP 04578-903, Brasil e CNPJ/M 73.042.962/0004-20
+            </p>
+        </div>
+    </footer>
     <script src="./src/main.js"></script>
 </body>
+
 </html>

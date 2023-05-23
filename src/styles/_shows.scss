@@ -1,7 +1,6 @@
+@use 'variaveis';
 
-@use 'variaveis'; 
-
-.shows{
+.shows {
     padding: 2vw 5.6vw;
     min-height: 50vw;
 
@@ -11,12 +10,16 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--is--active {
             display: grid;
         }
 
-        &__item{
-            img{
+        &__item {
+            img {
                 max-width: 100%;
                 border-radius: 4px;
             }
@@ -26,8 +29,8 @@
     &__tabs {
         display: flex;
         justify-content: center;
-        
-        &__button{
+
+        &__button {
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
             border: none;
@@ -38,7 +41,7 @@
             cursor: pointer;
             border-bottom: 5px solid transparent;
 
-            &--is--active{
+            &--is--active {
                 border-color: variaveis.$corTextoSecundario;
             }
         }
