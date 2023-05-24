@@ -20,6 +20,10 @@
                 cursor: pointer;
                 position: relative;
 
+                @media (max-width: 768px) {
+                    padding: 50px;
+                }
+
                 &::after {
                     content: '+';
                     position: absolute;
